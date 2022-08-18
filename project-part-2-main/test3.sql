@@ -1,0 +1,24 @@
+delete from complaint;
+delete from refund_request;
+delete from reply;
+delete from comment;
+delete from orderline;
+delete from orders;
+delete from sells;
+delete from shop;
+delete from issued_coupon;
+delete from users;
+delete from product;
+delete from category;
+delete from manufacturer;
+delete from coupon_batch;
+delete from employee;
+delete from refund_request;
+delete from complaint;
+
+begin transaction;
+insert into users values (1, 'address 1', 'user 1', TRUE), (2, 'address 2', 'user 2', FALSE);
+insert into shop values (1, 'shope 1'), (2, 'shop 2'), (3, 'shop 3');
+insert into category values (1, 'category 1', NULL), (2, 'category 2', 1);
+insert into manufacturer values (1, 'manufacturer 1', NULL);
+insert into product values (1, 'product 1', NULL, 1, 1), (2, 'product 2', NULL, 2, 1);
